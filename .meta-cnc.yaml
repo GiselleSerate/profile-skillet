@@ -61,8 +61,6 @@ variables:
         value: allow
       - key: alert
         value: alert
-      - key: dropdown
-        value: dropdown
       - key: reset-client
         value: reset-client
       - key: reset-server
