@@ -1,32 +1,12 @@
-{% for name in ['virus', 'spyware'] %}
-<{{ name }}>
+<virus>
   <entry name="{{ profile_name }}">
     <decoder>
-      <entry name="http">
+      {% for protocol in ['http', 'smtp', 'imap', 'pop3', 'ftp', 'smb'] %}
+      <entry name="{{ protocol }}">
         <action>{{ action_normal }}</action>
         <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
-      <entry name="smtp">
-        <action>{{ action_normal }}</action>
-        <wildfire-action>{{ action_wildfire }}</wildfire-action>
-      </entry>
-      <entry name="imap">
-        <action>{{ action_normal }}</action>
-        <wildfire-action>{{ action_wildfire }}</wildfire-action>
-      </entry>
-      <entry name="pop3">
-        <action>{{ action_normal }}</action>
-        <wildfire-action>{{ action_wildfire }}</wildfire-action>
-      </entry>
-      <entry name="ftp">
-        <action>{{ action_normal }}</action>
-        <wildfire-action>{{ action_wildfire }}</wildfire-action>
-      </entry>
-      <entry name="smb">
-        <action>{{ action_normal }}</action>
-        <wildfire-action>{{ action_wildfire }}</wildfire-action>
-      </entry>
+      {% endfor %}
     </decoder>
   </entry>
-</{{ name }}>
-{% endfor %}
+</virus>
