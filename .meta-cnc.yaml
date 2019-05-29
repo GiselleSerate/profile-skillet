@@ -1,10 +1,10 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: mySkillet
+name: profile_skillet
 # label used for menu selection
-label: my_skillet_label
-description: this is what my skillet does
+label: profile_skillet
+description: Add a new antivirus profile with one action for normal and one action for wildfire
 
 # type of device configuration
 # common types are panorama, panos, and template
@@ -16,7 +16,7 @@ extends:
 # grouping of like snippets for dynamic menu creation in panhandler
 labels:
   collection:
-    - myCollection
+    - tutorial
 
 # ---------------------------------------------------------------------
 # end of preamble section
