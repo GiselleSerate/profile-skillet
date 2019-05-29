@@ -1,0 +1,84 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: mySkillet
+# label used for menu selection
+label: my_skillet_label
+description: this is what my skillet does
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: panos
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - myCollection
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+# variables section
+# ---------------------------------------------------------------------
+# variables used in the configuration templates
+# type_hint defines the form field used by panhandler
+# type_hints can be text, ip_address, or dropdown
+variables:
+  - name: profile-name
+    description: profile name
+    default: newProfile
+    type_hint: text
+  - name: action-normal
+    description: action to take normally
+    default: default
+    type_hint: dropdown
+    dd_list:
+      - key: default
+        value: default
+      - key: allow
+        value: allow
+      - key: alert
+        value: alert
+      - key: dropdown
+        value: dropdown
+      - key: reset-client
+        value: reset-client
+      - key: reset-server
+        value: reset-server
+      - key: reset-both
+        value: reset-both
+  - name: action-wildfire
+    description: action to take with wildfire
+    default: default
+    type_hint: dropdown
+    dd_list:
+      - key: default
+        value: default
+      - key: allow
+        value: allow
+      - key: alert
+        value: alert
+      - key: dropdown
+        value: dropdown
+      - key: reset-client
+        value: reset-client
+      - key: reset-server
+        value: reset-server
+      - key: reset-both
+        value: reset-both
+# ---------------------------------------------------------------------
+# end of variables section
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: profiles
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/profiles
+    file: profiles.xml
+# ---------------------------------------------------------------------
+# end of snippets section
