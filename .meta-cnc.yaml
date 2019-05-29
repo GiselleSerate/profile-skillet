@@ -27,11 +27,11 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: profile-name
+  - name: profile_name
     description: profile name
     default: newProfile
     type_hint: text
-  - name: action-normal
+  - name: action_normal
     description: action to take normally
     default: default
     type_hint: dropdown
@@ -50,7 +50,7 @@ variables:
         value: reset-server
       - key: reset-both
         value: reset-both
-  - name: action-wildfire
+  - name: action_wildfire
     description: action to take with wildfire
     default: default
     type_hint: dropdown

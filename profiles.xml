@@ -1,30 +1,30 @@
 {% for name in (virus, spyware) %}
 <{{ name }}>
-  <entry name="{{ profile-name }}">
+  <entry name="{{ profile_name }}">
     <decoder>
       <entry name="http">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
       <entry name="smtp">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
       <entry name="imap">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
       <entry name="pop3">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
       <entry name="ftp">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
       <entry name="smb">
-        <action>{{ action-normal }}</action>
-        <wildfire-action>{{ action-wildfire }}</wildfire-action>
+        <action>{{ action_normal }}</action>
+        <wildfire-action>{{ action_wildfire }}</wildfire-action>
       </entry>
     </decoder>
   </entry>
