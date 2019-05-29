@@ -1,4 +1,4 @@
-{% for name in (virus, spyware) %}
+{% for name in ['virus', 'spyware'] %}
 <{{ name }}>
   <entry name="{{ profile_name }}">
     <decoder>
